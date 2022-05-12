@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "nft-marketplace",
+    "slug": "nft-marketplace",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
