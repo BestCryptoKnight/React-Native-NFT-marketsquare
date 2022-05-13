@@ -30,22 +30,6 @@ const theme = {
 };
 
 export default function App() {
-
-
-  const [fontsLoaded] = useFonts({
-    InterBold: require('./src/assets/fonts/Inter-Bold.ttf'),
-    InterRegular: require('.src/assets/fonts/Inter-Regular.ttf'),
-    InterSemiBold: require('.src/assets/fonts/Inter-SemiBold.ttf'),
-    InterLight: require('.src/assets/fonts/Inter-Light.ttf'),
-    InterMedium: require('.src/assets/fonts/Inter-Medium.ttf'),
-
-    
-  });
-
-
-  if (!fontsLoaded) {
-    return null;
-
   return (
     <NavigationContainer>
       <Stack.Navigator
