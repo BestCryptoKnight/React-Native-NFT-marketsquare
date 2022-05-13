@@ -1,7 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import { useFonts } from "expo-font";
+import { useFont}
 // In App.js in a new project
 
 import { NavigationContainer } from "@react-navigation/native";
