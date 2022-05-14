@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from "react-native";
 import { useFonts } from "expo-font";
 // In App.js in a new project
 
-import { NavigationContainer } from "@react-navigation/native";
+import { NavigationContainer , DefaultTheme } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomeScreen from "./src/pages/home";
 import DetailsScreen from "./src/pages/details";
@@ -16,38 +16,25 @@ const theme = {
   colors: {
     ...DefaultTheme.colors,
     background: "transparent",
-    primary: "#00a680",
-    secondary: "#f5f5f5",
-    tertiary: "#f5f5f5",
-    quaternary: "#f5f5f5",
-    quinary: "#f5f5f5",
-    senary: "#f5f5f5",
-    septenary: "#f5f5f5",
-    octonary: "#f5f5f5",
-    nonary: "#f5f5f5",
-    denary: "#f5f5f5",
+
   },
 };
 
 export default function App() {
-
-
   const [fontsLoaded] = useFonts({
-    InterBold: require('./src/assets/fonts/Inter-Bold.ttf'),
-    InterRegular: require('.src/assets/fonts/Inter-Regular.ttf'),
-    InterSemiBold: require('.src/assets/fonts/Inter-SemiBold.ttf'),
-    InterLight: require('.src/assets/fonts/Inter-Light.ttf'),
-    InterMedium: require('.src/assets/fonts/Inter-Medium.ttf'),
-
-    
+    InterBold: require("./src/assets/fonts/Inter-Bold.ttf"),
+    InterRegular: require("./src/assets/fonts/Inter-Regular.ttf"),
+    InterSemiBold: require("./src/assets/fonts/Inter-SemiBold.ttf"),
+    InterLight: require("./src/assets/fonts/Inter-Light.ttf"),
+    InterMedium: require("./src/assets/fonts/Inter-Medium.ttf"),
   });
-
 
   if (!fontsLoaded) {
     return null;
+  }
 
   return (
-    <NavigationContainer>
+    <NavigationContainer theme={theme}>
       <Stack.Navigator
         screenOptions={{
           headerShown: false,
@@ -55,7 +42,7 @@ export default function App() {
         initialRouteName="Home"
       >
         <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="details" component={DetailsScreen} />
+        {/* <Stack.Screen name="details" component={DetailsScreen} /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );
