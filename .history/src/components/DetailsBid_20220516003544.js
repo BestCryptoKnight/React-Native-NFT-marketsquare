@@ -11,7 +11,7 @@ export default function DetailsBid({ bid }) {
         justifyContent: "space-between",
         width: "100%",
         alignItems: "center",
-      
+        marginVertical: SIZES.base,
         paddingHorizontal: SIZES.font ,
       }}
     >

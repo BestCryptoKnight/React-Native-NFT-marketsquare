@@ -22,7 +22,7 @@ export function NFTTitle({ title, subtitle, titleSize, subtitleSize }) {
           color: COLORS.primary,
         }}
       >
-       by {subtitle}
+        {subtitle}
       </Text>
     </View>
   );
