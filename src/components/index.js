@@ -4,6 +4,8 @@ import FocusedStatusBar from "./FocusedStatusBar";
 import HomeHeader from "./HomeHeader";
 import DetailsDesc from "./DetailsDesc";
 import DetailsBid from "./DetailsBid";
+import { SubInfo } from "./SubInfo";
+import Bids from "./Bids";
 
 import { RectButton, CircleButton } from "./Button";
 
@@ -15,4 +17,6 @@ export {
   CircleButton,
   DetailsBid,
   DetailsDesc,
+  SubInfo,
+  Bids,
 };

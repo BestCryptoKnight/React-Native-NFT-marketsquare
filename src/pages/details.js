@@ -16,16 +16,38 @@ import {
   RectButton,
   DetailsBid,
   DetailsDesc,
+  Bids,
 } from "../components";
 
 const DetailsHeader = ({ data, navigation }) => (
-  <View style={{ width: "100%" , height: 373 }}>
-    <Image source={data.image} style={{ width: "100%" }}
-      resizeMode = "contain"
-    
-    
+  <View style={{ width: "100%", height: 373 }}>
+    <Image
+      source={data.image}
+      style={{ width: "100%", height: "100%" }}
+      resizeMode="cover"
     />
 
+    <CircleButton
+      imgUrl={assets.left}
+      handlePress={() => navigation.goBack()}
+      left={15}
+      top={StatusBar.currentHeight + 2}
+      style={{
+        top: SIZES.large,
+        left: SIZES.large,
+      }}
+    />
+
+    <CircleButton
+      imgUrl={assets.heart}
+      handlePress={() => navigation.goBack()}
+      right={15}
+      top={StatusBar.currentHeight + 2}
+      style={{
+        top: SIZES.large,
+        left: SIZES.large,
+      }}
+    />
   </View>
 );
 
@@ -36,7 +58,7 @@ export default function Details({ route, navigation }) {
     <SafeAreaView style={{ flex: 1 }}>
       <FocusedStatusBar
         barStyle="dark-content"
-        backgroundColor={"transparent"}
+        background={"transparent"}
         translucent={true}
       />
 
@@ -59,13 +81,31 @@ export default function Details({ route, navigation }) {
         data={data.bids}
         renderItem={({ item }) => <DetailsBid bid={item} />}
         keyExtractor={(item) => item.id}
-        style={{ marginTop: SIZES.large }}
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{
           paddingBottom: SIZES.extraLarge * 3,
         }}
         ListHeaderComponent={() => (
-          <DetailsHeader data={data} navigation={navigation} />
+          <React.Fragment>
+            <DetailsHeader data={data} navigation={navigation} />
+            <SubInfo data={data} />
+
+            <View>
+              <DetailsDesc data={data} />
+            </View>
+
+            <Text
+              style={{
+                fontSize: SIZES.font,
+                fontFamily: FONTS.semiBold,
+                color: COLORS.primary,
+                marginTop: SIZES.base,
+                padding: SIZES.font,
+              }}
+            >
+              Current Bids
+            </Text>
+          </React.Fragment>
         )}
       />
     </SafeAreaView>
