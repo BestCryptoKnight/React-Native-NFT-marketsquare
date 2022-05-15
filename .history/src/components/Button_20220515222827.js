@@ -48,7 +48,6 @@ export function RectButton({ minWidth, fontSize, handlePress, ...props }) {
           fontSize: fontSize,
           fontFamily: FONTS.medium,
           color: COLORS.white,
-          textAlign: "center",
         }}
       >
         Place a bid

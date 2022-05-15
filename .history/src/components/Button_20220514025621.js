@@ -3,9 +3,6 @@ import React from "react";
 import { COLORS, FONTS, SHADOWS, SIZES } from "../constants";
 
 export function CircleButton({ imgUrl, handlePress, ...props }) {
-  // function to determine if number is even or odd
-  const isEven = (num) => num % 2 === 0;
-
   return (
     <TouchableOpacity
       style={{
@@ -48,7 +45,6 @@ export function RectButton({ minWidth, fontSize, handlePress, ...props }) {
           fontSize: fontSize,
           fontFamily: FONTS.medium,
           color: COLORS.white,
-          textAlign: "center",
         }}
       >
         Place a bid

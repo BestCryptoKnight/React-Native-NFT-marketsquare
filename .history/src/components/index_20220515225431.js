@@ -14,5 +14,4 @@ export {
   RectButton,
   CircleButton,
   DetailsBid,
-  DetailsDesc,
 };

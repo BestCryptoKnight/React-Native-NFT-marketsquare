@@ -13,6 +13,4 @@ export {
   HomeHeader,
   RectButton,
   CircleButton,
-  DetailsBid,
-  DetailsDesc,
-};
+  };

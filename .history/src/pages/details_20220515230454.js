@@ -2,7 +2,7 @@ import {
   View,
   Text,
   SafeAreaView,
-  Image,
+  image,
   StatusBar,
   FlatList,
 } from "react-native";
@@ -18,16 +18,25 @@ import {
   DetailsDesc,
 } from "../components";
 
-const DetailsHeader = ({ data, navigation }) => (
-  <View style={{ width: "100%" , height: 373 }}>
-    <Image source={data.image} style={{ width: "100%" }}
-      resizeMode = "contain"
-    
-    
-    />
 
-  </View>
-);
+const DetailsHeader = () => {
+  return (
+    <View
+      style={{
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+        padding: SIZES.large,
+        ...SHADOWS.light,
+      }}
+    >
+      <View>
+        <Text
+          style={{
+            fontSize: SIZES.large,
+            fontFamily: FONTS.medium,
+            color: COLORS.white,
+            
 
 export default function Details({ route, navigation }) {
   const { data } = route.params;
@@ -65,8 +74,15 @@ export default function Details({ route, navigation }) {
           paddingBottom: SIZES.extraLarge * 3,
         }}
         ListHeaderComponent={() => (
-          <DetailsHeader data={data} navigation={navigation} />
-        )}
+          <View
+            style={{
+              width: "100%",
+              paddingHorizontal: SIZES.large,
+              paddingVertical: SIZES.extraLarge,
+            }}
+          >
+
+
       />
     </SafeAreaView>
   );

@@ -20,8 +20,7 @@ import {
 
 const DetailsHeader = ({ data, navigation }) => (
   <View style={{ width: "100%" , height: 373 }}>
-    <Image source={data.image} style={{ width: "100%" }}
-      resizeMode = "contain"
+    <Image source={data.image} style={{ width: "100%", height: 373 }}
     
     
     />
